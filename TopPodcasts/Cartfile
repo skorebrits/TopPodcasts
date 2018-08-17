@@ -1,0 +1,4 @@
+#Alamofire
+github "Alamofire/Alamofire" ~> 4.7
+#OHTTPStubs
+github "AliSoftware/OHHTTPStubs" "master"

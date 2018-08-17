@@ -1,0 +1,24 @@
+{
+  "Mac" : [
+    {
+      "name" : "OHHTTPStubs",
+      "hash" : "60fe50ddf0fc212a000ef1c58bef5e017931992494d252c9cfd6ffca060de153"
+    }
+  ],
+  "watchOS" : [
+
+  ],
+  "tvOS" : [
+    {
+      "name" : "OHHTTPStubs",
+      "hash" : "dd706f309cdd378826ab3547f4c335f0a36c58828932260a503540b5c845c9c0"
+    }
+  ],
+  "commitish" : "826a9217fcd468220d154ed0075cbc1a20d0c5c9",
+  "iOS" : [
+    {
+      "name" : "OHHTTPStubs",
+      "hash" : "0bc9bd4db658971b94d320c0e552a6fd6809aece9b4b9f0b5140114391a3477a"
+    }
+  ]
+}

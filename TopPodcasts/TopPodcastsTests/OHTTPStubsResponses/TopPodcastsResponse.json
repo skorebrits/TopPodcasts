@@ -1,0 +1,726 @@
+{
+    "feed": {
+        "title": "Top Audio Podcasts",
+        "id": "https://rss.itunes.apple.com/api/v1/nl/podcasts/top-podcasts/all/25/explicit.json",
+        "author": {
+            "name": "iTunes Store",
+            "uri": "http://wwww.apple.com/nl/itunes/"
+        },
+        "links": [
+                  {
+                  "self": "https://rss.itunes.apple.com/api/v1/nl/podcasts/top-podcasts/all/25/explicit.json"
+                  },
+                  {
+                  "alternate": "https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewTop?genreId=26&popId=28"
+                  }
+                  ],
+        "copyright": "Copyright © 2018 Apple Inc. All rights reserved.",
+        "country": "nl",
+        "icon": "http://itunes.apple.com/favicon.ico",
+        "updated": "2018-08-14T01:52:17.000-07:00",
+        "results": [
+                    {
+                    "artistName": "NPO Radio 1 / VPRO",
+                    "id": "1412808006",
+                    "releaseDate": "2018-08-08",
+                    "name": "VPRO Zomergasten",
+                    "kind": "podcast",
+                    "copyright": "© NPO Radio 1 / VPRO",
+                    "artworkUrl100": "https://is4-ssl.mzstatic.com/image/thumb/Music118/v4/2b/0c/15/2b0c15ea-3ac8-71ad-ffda-f8806de09a6c/source/200x200bb.png",
+                    "genres": [
+                               {
+                               "genreId": "1324",
+                               "name": "Maatschappij en cultuur",
+                               "url": "https://itunes.apple.com/nl/genre/id1324"
+                               },
+                               {
+                               "genreId": "26",
+                               "name": "Podcasts",
+                               "url": "https://itunes.apple.com/nl/genre/id26"
+                               }
+                               ],
+                    "url": "https://itunes.apple.com/nl/podcast/vpro-zomergasten/id1412808006?mt=2"
+                    },
+                    {
+                    "artistName": "NPO Radio 1 / NOS",
+                    "id": "336581511",
+                    "releaseDate": "2018-07-22",
+                    "name": "NOS Langs de Lijn Sport Forum",
+                    "kind": "podcast",
+                    "copyright": "© NPO Radio 1 / NOS",
+                    "artistId": "296396671",
+                    "artistUrl": "https://itunes.apple.com/nl/artist/npo-radio-1-nos/296396671?mt=2",
+                    "artworkUrl100": "https://is4-ssl.mzstatic.com/image/thumb/Music115/v4/15/f9/e6/15f9e601-5b59-23c2-dc8f-42d01cd1a517/source/200x200bb.png",
+                    "genres": [
+                               {
+                               "genreId": "1465",
+                               "name": "Professioneel",
+                               "url": "https://itunes.apple.com/nl/genre/id1465"
+                               },
+                               {
+                               "genreId": "26",
+                               "name": "Podcasts",
+                               "url": "https://itunes.apple.com/nl/genre/id26"
+                               },
+                               {
+                               "genreId": "1316",
+                               "name": "Sport en recreatie",
+                               "url": "https://itunes.apple.com/nl/genre/id1316"
+                               },
+                               {
+                               "genreId": "1311",
+                               "name": "Nieuws en politiek",
+                               "url": "https://itunes.apple.com/nl/genre/id1311"
+                               }
+                               ],
+                    "url": "https://itunes.apple.com/nl/podcast/nos-langs-de-lijn-sport-forum/id336581511?mt=2"
+                    },
+                    {
+                    "artistName": "De Correspondent",
+                    "id": "924429487",
+                    "releaseDate": "2018-08-03",
+                    "name": "De Correspondent",
+                    "kind": "podcast",
+                    "copyright": "© All rights reserved",
+                    "artistId": "1248547753",
+                    "artistUrl": "https://itunes.apple.com/nl/artist/de-correspondent/1248547753?mt=2",
+                    "artworkUrl100": "https://is5-ssl.mzstatic.com/image/thumb/Music3/v4/26/40/fd/2640fd1a-f593-8a77-a20e-69121c01b49f/source/200x200bb.png",
+                    "genres": [
+                               {
+                               "genreId": "1311",
+                               "name": "Nieuws en politiek",
+                               "url": "https://itunes.apple.com/nl/genre/id1311"
+                               },
+                               {
+                               "genreId": "26",
+                               "name": "Podcasts",
+                               "url": "https://itunes.apple.com/nl/genre/id26"
+                               }
+                               ],
+                    "url": "https://itunes.apple.com/nl/podcast/de-correspondent/id924429487?mt=2"
+                    },
+                    {
+                    "artistName": "NOS",
+                    "id": "204558483",
+                    "releaseDate": "2018-08-13",
+                    "name": "NOS-Met Het Oog Op Morgen",
+                    "kind": "podcast",
+                    "copyright": "© copyright NOS. No unauthorized distribution allowed.",
+                    "artistId": "296396671",
+                    "artistUrl": "https://itunes.apple.com/nl/artist/nos/296396671?mt=2",
+                    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music49/v4/83/d3/10/83d310bc-c82f-e7c4-e39d-a40631483ac3/source/200x200bb.png",
+                    "genres": [
+                               {
+                               "genreId": "1311",
+                               "name": "Nieuws en politiek",
+                               "url": "https://itunes.apple.com/nl/genre/id1311"
+                               },
+                               {
+                               "genreId": "26",
+                               "name": "Podcasts",
+                               "url": "https://itunes.apple.com/nl/genre/id26"
+                               }
+                               ],
+                    "url": "https://itunes.apple.com/nl/podcast/nos-met-het-oog-op-morgen/id204558483?mt=2"
+                    },
+                    {
+                    "artistName": "NPO Radio 1 / VPRO",
+                    "id": "1056931611",
+                    "releaseDate": "2018-08-09",
+                    "name": "Parel Radio",
+                    "kind": "podcast",
+                    "copyright": "© NPO Radio 1 / VPRO",
+                    "artistId": "1368077669",
+                    "artistUrl": "https://itunes.apple.com/nl/artist/npo-radio-1-vpro/1368077669?mt=2",
+                    "artworkUrl100": "https://is4-ssl.mzstatic.com/image/thumb/Music125/v4/e2/46/b8/e246b885-763d-b26a-ea7e-3efd511c3ff4/source/200x200bb.png",
+                    "genres": [
+                               {
+                               "genreId": "1324",
+                               "name": "Maatschappij en cultuur",
+                               "url": "https://itunes.apple.com/nl/genre/id1324"
+                               },
+                               {
+                               "genreId": "26",
+                               "name": "Podcasts",
+                               "url": "https://itunes.apple.com/nl/genre/id26"
+                               }
+                               ],
+                    "url": "https://itunes.apple.com/nl/podcast/parel-radio/id1056931611?mt=2"
+                    },
+                    {
+                    "artistName": "Echt Gebeurd",
+                    "id": "638203140",
+                    "releaseDate": "2018-08-02",
+                    "name": "Echt Gebeurd",
+                    "kind": "podcast",
+                    "copyright": "© Echt Gebeurd",
+                    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/34/90/c6/3490c6f7-ffe6-ea06-e92f-cd01677e658e/source/200x200bb.png",
+                    "genres": [
+                               {
+                               "genreId": "1401",
+                               "name": "Literatuur",
+                               "url": "https://itunes.apple.com/nl/genre/id1401"
+                               },
+                               {
+                               "genreId": "26",
+                               "name": "Podcasts",
+                               "url": "https://itunes.apple.com/nl/genre/id26"
+                               },
+                               {
+                               "genreId": "1301",
+                               "name": "Kunst",
+                               "url": "https://itunes.apple.com/nl/genre/id1301"
+                               },
+                               {
+                               "genreId": "1324",
+                               "name": "Maatschappij en cultuur",
+                               "url": "https://itunes.apple.com/nl/genre/id1324"
+                               }
+                               ],
+                    "url": "https://itunes.apple.com/nl/podcast/echt-gebeurd/id638203140?mt=2"
+                    },
+                    {
+                    "artistName": "NU.nl Dit wordt het nieuws",
+                    "id": "1290193384",
+                    "releaseDate": "2018-08-15",
+                    "name": "NU.nl Dit wordt het nieuws",
+                    "kind": "podcast",
+                    "copyright": "© All rights reserved",
+                    "artworkUrl100": "https://is4-ssl.mzstatic.com/image/thumb/Music128/v4/b8/23/22/b8232261-296e-93ea-c3ff-41b93cdcf92b/source/200x200bb.png",
+                    "genres": [
+                               {
+                               "genreId": "1311",
+                               "name": "Nieuws en politiek",
+                               "url": "https://itunes.apple.com/nl/genre/id1311"
+                               },
+                               {
+                               "genreId": "26",
+                               "name": "Podcasts",
+                               "url": "https://itunes.apple.com/nl/genre/id26"
+                               }
+                               ],
+                    "url": "https://itunes.apple.com/nl/podcast/nu-nl-dit-wordt-het-nieuws/id1290193384?mt=2"
+                    },
+                    {
+                    "artistName": "Rutger Bregman & Jesse Frederik",
+                    "id": "1172287016",
+                    "releaseDate": "2018-08-04",
+                    "name": "De Rudi & Freddie Show",
+                    "kind": "podcast",
+                    "copyright": "© All rights reserved",
+                    "artistId": "1248547753",
+                    "artistUrl": "https://itunes.apple.com/nl/artist/rutger-bregman-jesse-frederik/1248547753?mt=2",
+                    "artworkUrl100": "https://is3-ssl.mzstatic.com/image/thumb/Music122/v4/bd/d6/c1/bdd6c1a4-508e-f0da-6ae0-4b15bd399879/source/200x200bb.png",
+                    "genres": [
+                               {
+                               "genreId": "1311",
+                               "name": "Nieuws en politiek",
+                               "url": "https://itunes.apple.com/nl/genre/id1311"
+                               },
+                               {
+                               "genreId": "26",
+                               "name": "Podcasts",
+                               "url": "https://itunes.apple.com/nl/genre/id26"
+                               }
+                               ],
+                    "url": "https://itunes.apple.com/nl/podcast/de-rudi-freddie-show/id1172287016?mt=2"
+                    },
+                    {
+                    "artistName": "Formula 1",
+                    "id": "1405972616",
+                    "releaseDate": "2018-08-15",
+                    "name": "F1: Beyond The Grid",
+                    "kind": "podcast",
+                    "artworkUrl100": "https://is5-ssl.mzstatic.com/image/thumb/Music115/v4/8d/85/55/8d85558b-4a47-62bf-d74b-f7f993be7894/source/200x200bb.png",
+                    "genres": [
+                               {
+                               "genreId": "1316",
+                               "name": "Sport en recreatie",
+                               "url": "https://itunes.apple.com/nl/genre/id1316"
+                               },
+                               {
+                               "genreId": "26",
+                               "name": "Podcasts",
+                               "url": "https://itunes.apple.com/nl/genre/id26"
+                               },
+                               {
+                               "genreId": "1318",
+                               "name": "Technologie",
+                               "url": "https://itunes.apple.com/nl/genre/id1318"
+                               },
+                               {
+                               "genreId": "1450",
+                               "name": "Podcasting",
+                               "url": "https://itunes.apple.com/nl/genre/id1450"
+                               },
+                               {
+                               "genreId": "1323",
+                               "name": "Games en hobby's",
+                               "url": "https://itunes.apple.com/nl/genre/id1323"
+                               },
+                               {
+                               "genreId": "1454",
+                               "name": "Automobiel",
+                               "url": "https://itunes.apple.com/nl/genre/id1454"
+                               }
+                               ],
+                    "url": "https://itunes.apple.com/nl/podcast/f1-beyond-the-grid/id1405972616?mt=2"
+                    },
+                    {
+                    "artistName": "De Voetbalpodcast",
+                    "id": "1373036184",
+                    "releaseDate": "2018-08-14",
+                    "name": "De Voetbalpodcast",
+                    "kind": "podcast",
+                    "copyright": "© All rights reserved",
+                    "artworkUrl100": "https://is4-ssl.mzstatic.com/image/thumb/Music128/v4/e1/52/e5/e152e5d6-a8b8-e5ad-9a45-2b754f94403d/source/200x200bb.png",
+                    "genres": [
+                               {
+                               "genreId": "1316",
+                               "name": "Sport en recreatie",
+                               "url": "https://itunes.apple.com/nl/genre/id1316"
+                               },
+                               {
+                               "genreId": "26",
+                               "name": "Podcasts",
+                               "url": "https://itunes.apple.com/nl/genre/id26"
+                               }
+                               ],
+                    "url": "https://itunes.apple.com/nl/podcast/de-voetbalpodcast/id1373036184?mt=2"
+                    },
+                    {
+                    "artistName": "NOS op 3",
+                    "id": "1079387708",
+                    "releaseDate": "2018-08-09",
+                    "name": "NOS op 3 Tech Podcast",
+                    "kind": "podcast",
+                    "copyright": "© 2018, NOS op 3",
+                    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music62/v4/d0/20/39/d0203976-3cdb-d497-f11a-caf357aae3be/source/200x200bb.png",
+                    "genres": [
+                               {
+                               "genreId": "1448",
+                               "name": "Technologienieuws",
+                               "url": "https://itunes.apple.com/nl/genre/id1448"
+                               },
+                               {
+                               "genreId": "26",
+                               "name": "Podcasts",
+                               "url": "https://itunes.apple.com/nl/genre/id26"
+                               },
+                               {
+                               "genreId": "1318",
+                               "name": "Technologie",
+                               "url": "https://itunes.apple.com/nl/genre/id1318"
+                               }
+                               ],
+                    "url": "https://itunes.apple.com/nl/podcast/nos-op-3-tech-podcast/id1079387708?mt=2"
+                    },
+                    {
+                    "artistName": "Audible",
+                    "id": "1237931798",
+                    "releaseDate": "2018-04-27",
+                    "name": "Where Should We Begin? with Esther Perel",
+                    "kind": "podcast",
+                    "copyright": "©2017 Audible Originals, LLC (P) 2017 Audible Originals, LLC",
+                    "artistId": "1237317443",
+                    "artistUrl": "https://itunes.apple.com/nl/artist/audible/1237317443?mt=2",
+                    "artworkUrl100": "https://is2-ssl.mzstatic.com/image/thumb/Music128/v4/f4/33/3a/f4333ad3-5c71-b3c2-f041-0c6fba914bde/source/200x200bb.png",
+                    "genres": [
+                               {
+                               "genreId": "1324",
+                               "name": "Maatschappij en cultuur",
+                               "url": "https://itunes.apple.com/nl/genre/id1324"
+                               },
+                               {
+                               "genreId": "26",
+                               "name": "Podcasts",
+                               "url": "https://itunes.apple.com/nl/genre/id26"
+                               }
+                               ],
+                    "url": "https://itunes.apple.com/nl/podcast/where-should-we-begin-with-esther-perel/id1237931798?mt=2"
+                    },
+                    {
+                    "artistName": "BNR Nieuwsradio",
+                    "id": "1183412549",
+                    "releaseDate": "2018-08-09",
+                    "name": "De Technoloog | BNR",
+                    "kind": "podcast",
+                    "copyright": "© 2018 BNR.nl",
+                    "artistId": "213506832",
+                    "artistUrl": "https://itunes.apple.com/nl/artist/bnr-nieuwsradio/213506832?mt=2",
+                    "artworkUrl100": "https://is4-ssl.mzstatic.com/image/thumb/Music118/v4/65/6b/6b/656b6b72-d884-f68e-ccfa-f8a2b28941bc/source/200x200bb.png",
+                    "genres": [
+                               {
+                               "genreId": "1448",
+                               "name": "Technologienieuws",
+                               "url": "https://itunes.apple.com/nl/genre/id1448"
+                               },
+                               {
+                               "genreId": "26",
+                               "name": "Podcasts",
+                               "url": "https://itunes.apple.com/nl/genre/id26"
+                               },
+                               {
+                               "genreId": "1318",
+                               "name": "Technologie",
+                               "url": "https://itunes.apple.com/nl/genre/id1318"
+                               }
+                               ],
+                    "url": "https://itunes.apple.com/nl/podcast/de-technoloog-bnr/id1183412549?mt=2"
+                    },
+                    {
+                    "artistName": "VPRO",
+                    "id": "1310841205",
+                    "releaseDate": "2018-01-02",
+                    "name": "Bob",
+                    "kind": "podcast",
+                    "artistId": "179775409",
+                    "artistUrl": "https://itunes.apple.com/nl/artist/vpro/179775409?mt=2",
+                    "artworkUrl100": "https://is5-ssl.mzstatic.com/image/thumb/Music118/v4/ad/af/1f/adaf1f13-16af-6d03-fa19-46bbeeddc6a4/source/200x200bb.png",
+                    "genres": [
+                               {
+                               "genreId": "1324",
+                               "name": "Maatschappij en cultuur",
+                               "url": "https://itunes.apple.com/nl/genre/id1324"
+                               },
+                               {
+                               "genreId": "26",
+                               "name": "Podcasts",
+                               "url": "https://itunes.apple.com/nl/genre/id26"
+                               }
+                               ],
+                    "url": "https://itunes.apple.com/nl/podcast/bob/id1310841205?mt=2"
+                    },
+                    {
+                    "artistName": "Duolingo",
+                    "id": "1317493077",
+                    "releaseDate": "2018-08-09",
+                    "name": "Duolingo Spanish Podcast",
+                    "kind": "podcast",
+                    "copyright": "© Duolingo, Inc.",
+                    "artworkUrl100": "https://is3-ssl.mzstatic.com/image/thumb/Music118/v4/e9/6e/1e/e96e1e8a-8b27-93ab-5805-2571326d38b4/source/200x200bb.png",
+                    "genres": [
+                               {
+                               "genreId": "1469",
+                               "name": "Taalcursussen",
+                               "url": "https://itunes.apple.com/nl/genre/id1469"
+                               },
+                               {
+                               "genreId": "26",
+                               "name": "Podcasts",
+                               "url": "https://itunes.apple.com/nl/genre/id26"
+                               },
+                               {
+                               "genreId": "1304",
+                               "name": "Onderwijs",
+                               "url": "https://itunes.apple.com/nl/genre/id1304"
+                               },
+                               {
+                               "genreId": "1324",
+                               "name": "Maatschappij en cultuur",
+                               "url": "https://itunes.apple.com/nl/genre/id1324"
+                               },
+                               {
+                               "genreId": "1320",
+                               "name": "Steden en reizen",
+                               "url": "https://itunes.apple.com/nl/genre/id1320"
+                               }
+                               ],
+                    "url": "https://itunes.apple.com/nl/podcast/duolingo-spanish-podcast/id1317493077?mt=2"
+                    },
+                    {
+                    "artistName": "NPO Radio 1",
+                    "id": "1257096350",
+                    "releaseDate": "2018-08-03",
+                    "name": "Vakantieverhalen - Relaxen in de hangmat",
+                    "kind": "podcast",
+                    "copyright": "© NPO Radio 1",
+                    "artistId": "1368077669",
+                    "artistUrl": "https://itunes.apple.com/nl/artist/npo-radio-1/1368077669?mt=2",
+                    "artworkUrl100": "https://is4-ssl.mzstatic.com/image/thumb/Music125/v4/7f/b5/0c/7fb50c73-8d17-ef59-2b7d-c731437874b4/source/200x200bb.png",
+                    "genres": [
+                               {
+                               "genreId": "1324",
+                               "name": "Maatschappij en cultuur",
+                               "url": "https://itunes.apple.com/nl/genre/id1324"
+                               },
+                               {
+                               "genreId": "26",
+                               "name": "Podcasts",
+                               "url": "https://itunes.apple.com/nl/genre/id26"
+                               }
+                               ],
+                    "url": "https://itunes.apple.com/nl/podcast/vakantieverhalen-relaxen-in-de-hangmat/id1257096350?mt=2"
+                    },
+                    {
+                    "artistName": "Patrick Kicken",
+                    "id": "1095692593",
+                    "releaseDate": "2018-08-10",
+                    "name": "Leven Zonder Stress",
+                    "kind": "podcast",
+                    "copyright": "© 2017. All rights reserved.",
+                    "artworkUrl100": "https://is2-ssl.mzstatic.com/image/thumb/Music128/v4/36/01/d8/3601d811-edf8-8ba0-9636-7500c351dece/source/200x200bb.png",
+                    "genres": [
+                               {
+                               "genreId": "1307",
+                               "name": "Gezondheid",
+                               "url": "https://itunes.apple.com/nl/genre/id1307"
+                               },
+                               {
+                               "genreId": "26",
+                               "name": "Podcasts",
+                               "url": "https://itunes.apple.com/nl/genre/id26"
+                               }
+                               ],
+                    "url": "https://itunes.apple.com/nl/podcast/leven-zonder-stress/id1095692593?mt=2"
+                    },
+                    {
+                    "artistName": "Millionaire Interviews & Startup Entrepreneur Austin Peek",
+                    "id": "1287225837",
+                    "releaseDate": "2018-08-14",
+                    "name": "Entrepreneur Stories 4⃣ Inspiration: Millionaire Interviews 😀",
+                    "kind": "podcast",
+                    "copyright": "© Millionaire Interviews LLC",
+                    "artworkUrl100": "https://is5-ssl.mzstatic.com/image/thumb/Music128/v4/1a/db/a7/1adba7d5-8714-3187-8fc2-898c5d2ecc3e/source/200x200bb.png",
+                    "genres": [
+                               {
+                               "genreId": "1416",
+                               "name": "Hoger onderwijs",
+                               "url": "https://itunes.apple.com/nl/genre/id1416"
+                               },
+                               {
+                               "genreId": "26",
+                               "name": "Podcasts",
+                               "url": "https://itunes.apple.com/nl/genre/id26"
+                               },
+                               {
+                               "genreId": "1304",
+                               "name": "Onderwijs",
+                               "url": "https://itunes.apple.com/nl/genre/id1304"
+                               },
+                               {
+                               "genreId": "1307",
+                               "name": "Gezondheid",
+                               "url": "https://itunes.apple.com/nl/genre/id1307"
+                               },
+                               {
+                               "genreId": "1420",
+                               "name": "Zelfhulp",
+                               "url": "https://itunes.apple.com/nl/genre/id1420"
+                               },
+                               {
+                               "genreId": "1321",
+                               "name": "Zakelijk",
+                               "url": "https://itunes.apple.com/nl/genre/id1321"
+                               },
+                               {
+                               "genreId": "1413",
+                               "name": "Management en marketing",
+                               "url": "https://itunes.apple.com/nl/genre/id1413"
+                               }
+                               ],
+                    "url": "https://itunes.apple.com/nl/podcast/entrepreneur-stories-4-inspiration-millionaire-interviews/id1287225837?mt=2"
+                    },
+                    {
+                    "artistName": "Harry Lensink, Marian Husken / NU.nl / Dag en Nacht Media",
+                    "id": "1343287474",
+                    "releaseDate": "2018-07-13",
+                    "name": "De Willem Podcast",
+                    "kind": "podcast",
+                    "copyright": "© Dag en Nacht Media, Harry Lensink, Marian Husken",
+                    "artworkUrl100": "https://is2-ssl.mzstatic.com/image/thumb/Music115/v4/a4/d0/3b/a4d03b28-92c5-1b9a-54b9-f2b8124eeeab/source/200x200bb.png",
+                    "genres": [
+                               {
+                               "genreId": "1311",
+                               "name": "Nieuws en politiek",
+                               "url": "https://itunes.apple.com/nl/genre/id1311"
+                               },
+                               {
+                               "genreId": "26",
+                               "name": "Podcasts",
+                               "url": "https://itunes.apple.com/nl/genre/id26"
+                               },
+                               {
+                               "genreId": "1316",
+                               "name": "Sport en recreatie",
+                               "url": "https://itunes.apple.com/nl/genre/id1316"
+                               },
+                               {
+                               "genreId": "1456",
+                               "name": "Buitenleven",
+                               "url": "https://itunes.apple.com/nl/genre/id1456"
+                               }
+                               ],
+                    "url": "https://itunes.apple.com/nl/podcast/de-willem-podcast/id1343287474?mt=2"
+                    },
+                    {
+                    "artistName": "Das Mag FM",
+                    "id": "1421011417",
+                    "releaseDate": "2018-08-11",
+                    "name": "Sør",
+                    "kind": "podcast",
+                    "copyright": "© Copyright Das Mag FM",
+                    "artworkUrl100": "https://is5-ssl.mzstatic.com/image/thumb/Music128/v4/2b/8d/30/2b8d3082-abfe-7eb6-d775-44c88a2bcd85/source/200x200bb.png",
+                    "genres": [
+                               {
+                               "genreId": "1324",
+                               "name": "Maatschappij en cultuur",
+                               "url": "https://itunes.apple.com/nl/genre/id1324"
+                               },
+                               {
+                               "genreId": "26",
+                               "name": "Podcasts",
+                               "url": "https://itunes.apple.com/nl/genre/id26"
+                               }
+                               ],
+                    "url": "https://itunes.apple.com/nl/podcast/s%C3%B8r/id1421011417?mt=2"
+                    },
+                    {
+                    "artistName": "Byron Katie",
+                    "id": "292263838",
+                    "releaseDate": "2018-07-03",
+                    "name": "The Work of Byron Katie",
+                    "kind": "podcast",
+                    "copyright": "© 2001-2018, Byron Katie International, Inc. All rights reserved.",
+                    "artworkUrl100": "https://is2-ssl.mzstatic.com/image/thumb/Music118/v4/7d/07/ac/7d07acb1-e938-b66c-1f06-02432e60f507/source/200x200bb.png",
+                    "genres": [
+                               {
+                               "genreId": "1420",
+                               "name": "Zelfhulp",
+                               "url": "https://itunes.apple.com/nl/genre/id1420"
+                               },
+                               {
+                               "genreId": "26",
+                               "name": "Podcasts",
+                               "url": "https://itunes.apple.com/nl/genre/id26"
+                               },
+                               {
+                               "genreId": "1307",
+                               "name": "Gezondheid",
+                               "url": "https://itunes.apple.com/nl/genre/id1307"
+                               }
+                               ],
+                    "url": "https://itunes.apple.com/nl/podcast/the-work-of-byron-katie/id292263838?mt=2"
+                    },
+                    {
+                    "artistName": "The New York Times",
+                    "id": "1200361736",
+                    "releaseDate": "2018-08-14",
+                    "name": "The Daily",
+                    "kind": "podcast",
+                    "copyright": "© 2018",
+                    "artistId": "121664449",
+                    "artistUrl": "https://itunes.apple.com/nl/artist/the-new-york-times/121664449?mt=2",
+                    "artworkUrl100": "https://is4-ssl.mzstatic.com/image/thumb/Music122/v4/1b/83/76/1b8376aa-90a9-eae1-662d-2b24faf1bf6e/source/200x200bb.png",
+                    "genres": [
+                               {
+                               "genreId": "1311",
+                               "name": "Nieuws en politiek",
+                               "url": "https://itunes.apple.com/nl/genre/id1311"
+                               },
+                               {
+                               "genreId": "26",
+                               "name": "Podcasts",
+                               "url": "https://itunes.apple.com/nl/genre/id26"
+                               }
+                               ],
+                    "url": "https://itunes.apple.com/nl/podcast/the-daily/id1200361736?mt=2"
+                    },
+                    {
+                    "artistName": "Joe Rogan",
+                    "id": "360084272",
+                    "releaseDate": "2018-08-10",
+                    "name": "The Joe Rogan Experience",
+                    "kind": "podcast",
+                    "copyright": "Copyright © Talking Monkey Productions",
+                    "artistId": "974891224",
+                    "artistUrl": "https://itunes.apple.com/nl/artist/joe-rogan/974891224?mt=2",
+                    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music127/v4/d0/e6/5f/d0e65f81-c2cf-7f59-38e4-6abcfab7e38a/source/200x200bb.png",
+                    "genres": [
+                               {
+                               "genreId": "1303",
+                               "name": "Komedie",
+                               "url": "https://itunes.apple.com/nl/genre/id1303"
+                               },
+                               {
+                               "genreId": "26",
+                               "name": "Podcasts",
+                               "url": "https://itunes.apple.com/nl/genre/id26"
+                               },
+                               {
+                               "genreId": "1318",
+                               "name": "Technologie",
+                               "url": "https://itunes.apple.com/nl/genre/id1318"
+                               },
+                               {
+                               "genreId": "1450",
+                               "name": "Podcasting",
+                               "url": "https://itunes.apple.com/nl/genre/id1450"
+                               },
+                               {
+                               "genreId": "1324",
+                               "name": "Maatschappij en cultuur",
+                               "url": "https://itunes.apple.com/nl/genre/id1324"
+                               }
+                               ],
+                    "url": "https://itunes.apple.com/nl/podcast/the-joe-rogan-experience/id360084272?mt=2"
+                    },
+                    {
+                    "artistName": "NPO Radio 1",
+                    "id": "1339219119",
+                    "releaseDate": "2018-08-14",
+                    "name": "De Dag",
+                    "kind": "podcast",
+                    "copyright": "© NPO Radio 1",
+                    "artistId": "1368077669",
+                    "artistUrl": "https://itunes.apple.com/nl/artist/npo-radio-1/1368077669?mt=2",
+                    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/13/7a/00/137a0059-677d-7b2b-6b40-573d6db2467c/source/200x200bb.png",
+                    "genres": [
+                               {
+                               "genreId": "1311",
+                               "name": "Nieuws en politiek",
+                               "url": "https://itunes.apple.com/nl/genre/id1311"
+                               },
+                               {
+                               "genreId": "26",
+                               "name": "Podcasts",
+                               "url": "https://itunes.apple.com/nl/genre/id26"
+                               }
+                               ],
+                    "url": "https://itunes.apple.com/nl/podcast/de-dag/id1339219119?mt=2"
+                    },
+                    {
+                    "artistName": "De Derde Helft",
+                    "id": "1396524879",
+                    "releaseDate": "2018-08-13",
+                    "name": "De Derde Helft - Eredivisie",
+                    "kind": "podcast",
+                    "copyright": "℗ & © 2018 De Derde Helft - Eredivisie",
+                    "artworkUrl100": "https://is4-ssl.mzstatic.com/image/thumb/Music125/v4/b2/a8/b6/b2a8b6c7-6258-3276-137a-799e9abb28ce/source/200x200bb.png",
+                    "genres": [
+                               {
+                               "genreId": "1465",
+                               "name": "Professioneel",
+                               "url": "https://itunes.apple.com/nl/genre/id1465"
+                               },
+                               {
+                               "genreId": "26",
+                               "name": "Podcasts",
+                               "url": "https://itunes.apple.com/nl/genre/id26"
+                               },
+                               {
+                               "genreId": "1316",
+                               "name": "Sport en recreatie",
+                               "url": "https://itunes.apple.com/nl/genre/id1316"
+                               },
+                               {
+                               "genreId": "1467",
+                               "name": "Amateur",
+                               "url": "https://itunes.apple.com/nl/genre/id1467"
+                               }
+                               ],
+                    "url": "https://itunes.apple.com/nl/podcast/de-derde-helft-eredivisie/id1396524879?mt=2"
+                    }
+                    ]
+    }
+}
