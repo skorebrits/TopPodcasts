@@ -52,6 +52,7 @@
 		F494FE942127236D006F6FDC /* ShowPodcastInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F494FE902127236D006F6FDC /* ShowPodcastInteractorTests.swift */; };
 		F494FE952127236D006F6FDC /* ShowPodcastWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F494FE912127236D006F6FDC /* ShowPodcastWorkerTests.swift */; };
 		F494FE962127236D006F6FDC /* ShowPodcastPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F494FE922127236D006F6FDC /* ShowPodcastPresenterTests.swift */; };
+		F4A66D22212AFFD400C9FD2D /* 200x200bb.png in Resources */ = {isa = PBXBuildFile; fileRef = F4A66D21212AFFD300C9FD2D /* 200x200bb.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -138,6 +139,7 @@
 		F494FE902127236D006F6FDC /* ShowPodcastInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowPodcastInteractorTests.swift; sourceTree = "<group>"; };
 		F494FE912127236D006F6FDC /* ShowPodcastWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowPodcastWorkerTests.swift; sourceTree = "<group>"; };
 		F494FE922127236D006F6FDC /* ShowPodcastPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowPodcastPresenterTests.swift; sourceTree = "<group>"; };
+		F4A66D21212AFFD300C9FD2D /* 200x200bb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 200x200bb.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -302,6 +304,7 @@
 			children = (
 				F494FE622126F350006F6FDC /* TopPodcastsResponse.json */,
 				F494FE642126FA74006F6FDC /* MalformdJSON.json */,
+				F4A66D21212AFFD300C9FD2D /* 200x200bb.png */,
 			);
 			path = OHTTPStubsResponses;
 			sourceTree = "<group>";
@@ -474,6 +477,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4A66D22212AFFD400C9FD2D /* 200x200bb.png in Resources */,
 				F494FE632126F350006F6FDC /* TopPodcastsResponse.json in Resources */,
 				F494FE652126FA74006F6FDC /* MalformdJSON.json in Resources */,
 			);

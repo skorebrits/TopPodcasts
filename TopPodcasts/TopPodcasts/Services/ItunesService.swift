@@ -6,21 +6,27 @@
 //  Copyright © 2018 designlapp. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 import Alamofire
 
 class ItunesService{
-    enum Result{
-        case success(Feed)
-        case error(ItunesServiceError)
-        enum ItunesServiceError: Error{
-            case malformdJSON
-            case network
-        }
+    enum ItunesServiceError: Error{
+        case malformdJSON
+        case network
     }
     
-    class func fetchTopPodcasts(completion: @escaping (_ result: ItunesService.Result) -> Void){
+    enum FeedResult{
+        case success(Feed)
+        case error(ItunesServiceError)
+    }
+    
+    enum ImageResult{
+        case success(UIImage)
+        case error(ItunesServiceError)
+    }
+    
+    class func fetchTopPodcasts(completion: @escaping (_ result: ItunesService.FeedResult) -> Void){
         Alamofire.request("https://rss.itunes.apple.com/api/v1/nl/podcasts/top-podcasts/all/25/explicit.json").responseData { (dataResponse) in
             if let data = dataResponse.data,
                 dataResponse.result.isSuccess{
@@ -28,17 +34,33 @@ class ItunesService{
                 do{
                     let json = try decoder.decode([String: Feed].self, from: data)
                     guard let feed = json["feed"] else {
-                        completion(ItunesService.Result.error(ItunesService.Result.ItunesServiceError.malformdJSON))
+                        completion(ItunesService.FeedResult.error(ItunesService.ItunesServiceError.malformdJSON))
                         return
                     }
-                    completion(ItunesService.Result.success(feed))
+                    completion(ItunesService.FeedResult.success(feed))
                 }catch{
                     //MARK: Error JSON
-                    completion(ItunesService.Result.error(ItunesService.Result.ItunesServiceError.malformdJSON))
+                    completion(ItunesService.FeedResult.error(ItunesService.ItunesServiceError.malformdJSON))
                 }
             }else{
                 //MARK: Error Connection
-                completion(ItunesService.Result.error(ItunesService.Result.ItunesServiceError.network))
+                completion(ItunesService.FeedResult.error(ItunesService.ItunesServiceError.network))
+            }
+        }
+    }
+    
+    class func fetchImage(url: String, completion: @escaping (_ result: ItunesService.ImageResult) -> Void){
+        Alamofire.request(url).responseData { (dataResponse) in
+            if let data = dataResponse.result.value,
+                dataResponse.result.isSuccess{
+                guard let image = UIImage(data: data) else{
+                    completion(ItunesService.ImageResult.error(ItunesService.ItunesServiceError.network))
+                    return
+                }
+                completion(ItunesService.ImageResult.success(image))
+            }else{
+                //MARK: Error Connection
+                completion(ItunesService.ImageResult.error(ItunesService.ItunesServiceError.network))
             }
         }
     }

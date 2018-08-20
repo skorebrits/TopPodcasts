@@ -28,4 +28,15 @@ class ListPodcastsWorker{
             }
         }
     }
+    
+    func fetchImageArtwork(url: String, completion: @escaping (_ succes: Bool, _ artworkImage: UIImage?, _ errorMessage: String?) -> Void){
+        ItunesService.fetchImage(url: url) { (result) in
+            switch result{
+            case .success(let image):
+                completion(true, image, nil)
+            case .error(_):
+                completion(false, nil, ErrorMessage.ItunesService.networkError.str)
+            }
+        }
+    }
 }

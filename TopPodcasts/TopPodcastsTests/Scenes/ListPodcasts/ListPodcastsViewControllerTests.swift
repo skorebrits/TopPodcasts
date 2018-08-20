@@ -46,9 +46,14 @@ class ListPodcastsViewControllerTests: XCTestCase{
     // MARK: Test doubles
     class ListPodcastsBusinessLogicSpy: ListPodcastsBusinessLogic{
         var listPodcastsCalled = false
+        var fetchPodcastCalled = false
 
         func listPodcasts(request: ListPodcasts.ListPodcasts.Request) {
             listPodcastsCalled = true
+        }
+        
+        func fetchPodcastImage(request: ListPodcasts.FetchImage.Request) {
+            fetchPodcastCalled = true
         }
     }
 
@@ -76,5 +81,9 @@ class ListPodcastsViewControllerTests: XCTestCase{
 
         // Then
         //XCTAssertEqual(sut.nameTextField.text, "", "displaySomething(viewModel:) should update the name text field")
+    }
+    
+    func testDispayPodcast(){
+        
     }
 }

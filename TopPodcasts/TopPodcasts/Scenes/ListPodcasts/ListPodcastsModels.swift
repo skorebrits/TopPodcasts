@@ -13,25 +13,45 @@
 import UIKit
 
 enum ListPodcasts{
-  // MARK: Use cases
-  enum ListPodcasts{
-    struct Request{
-        
-    }
+    // MARK: Use cases
     
-    struct Response{
-        var podcasts: [Podcast]
-        var success: Bool
-        var errorMessage: String?
-    }
     
-    struct ViewModel{
-        struct CellDisplayModel{
-            var name: String
-            var image: UIImage?
+    enum ListPodcasts{
+        struct Request{
+            
         }
-        var response: Response
-        var displayModels: [CellDisplayModel]
+
+        struct Response{
+            var podcasts: [Podcast]
+            var success: Bool
+            var errorMessage: String?
+        }
+
+        struct ViewModel{
+            struct CellDisplayModel{
+                var name: String
+                var image: UIImage?
+            }
+            var response: Response
+            var displayModels: [CellDisplayModel]
+        }
     }
-  }
+    
+    enum FetchImage{
+        struct Request{
+            let row: Int
+        }
+        
+        struct Response{
+            var podcast: Podcast
+            var row: Int
+            var success: Bool
+            var errorMessage: String?
+        }
+        
+        struct ViewModel{
+            var response: Response
+            var displayModel: ListPodcasts.ViewModel.CellDisplayModel
+        }
+    }
 }

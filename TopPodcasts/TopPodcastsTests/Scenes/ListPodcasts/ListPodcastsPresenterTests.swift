@@ -36,9 +36,14 @@ class ListPodcastsPresenterTests: XCTestCase{
     // MARK: Test doubles
     class ListPodcastsDisplayLogicSpy: ListPodcastsDisplayLogic{
         var displayListPodcastsCalled = false
+        var displayPodcastCalled = false
 
         func displayListPodcasts(viewModel: ListPodcasts.ListPodcasts.ViewModel){
             displayListPodcastsCalled = true
+        }
+        
+        func displayPodcast(viewModel: ListPodcasts.FetchImage.ViewModel) {
+            displayPodcastCalled = true
         }
     }
 
@@ -55,5 +60,18 @@ class ListPodcastsPresenterTests: XCTestCase{
 
         // Then
         XCTAssertTrue(spy.displayListPodcastsCalled, "presentSomething(response:) should ask the view controller to display the result")
+    }
+    
+    func testPresentFetchedPodcast(){
+        // Given
+        let spy = ListPodcastsDisplayLogicSpy()
+        sut.viewController = spy
+        let response = ListPodcasts.FetchImage.Response(podcast: Podcast(), row: 0, success: true, errorMessage: nil)
+        
+        // When
+        sut.presentPodcast(response: response)
+        
+        // Then
+        XCTAssertTrue(spy.displayPodcastCalled, "presentSomething(response:) should ask the view controller to display the result")
     }
 }

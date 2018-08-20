@@ -24,7 +24,7 @@ class ItunesServiceTests: XCTestCase {
         OHHTTPStubs.removeAllStubs()
     }
     
-    func testShouldReturnPodcasts(){
+    func testFetchTopPodcastsShouldReturnPodcasts(){
         /*
          https://rss.itunes.apple.com/api/v1/nl/podcasts/top-podcasts/all/25/explicit.json
          */
@@ -46,7 +46,7 @@ class ItunesServiceTests: XCTestCase {
         wait(for: [excepting], timeout: 5)
     }
     
-    func testShouldErrorOnMalformdJSON(){
+    func testFetchTopPodcastsShouldErrorOnMalformdJSON(){
         let excepting = XCTestExpectation(description: "Should error on malformd JSON")
         let bundle = Bundle(for: type(of: self))
         stub(condition: isHost("rss.itunes.apple.com")) { (request) -> OHHTTPStubsResponse in
@@ -57,7 +57,7 @@ class ItunesServiceTests: XCTestCase {
             case .success(_):
                 XCTFail()
             case .error(let error):
-                XCTAssertEqual(ItunesService.Result.ItunesServiceError.malformdJSON, error)
+                XCTAssertEqual(ItunesService.ItunesServiceError.malformdJSON, error)
             }
             excepting.fulfill()
         }
@@ -65,7 +65,7 @@ class ItunesServiceTests: XCTestCase {
     }
     
     
-    func testShouldErrorOnNoNetwork(){
+    func testFetchTopPodcastsShouldErrorOnNoNetwork(){
         let excepting = XCTestExpectation(description: "Should Error on no Network")
         stub(condition: isHost("rss.itunes.apple.com")) { (request) -> OHHTTPStubsResponse in
             let notConnectedError = NSError(domain: NSURLErrorDomain, code: URLError.notConnectedToInternet.rawValue)
@@ -76,10 +76,52 @@ class ItunesServiceTests: XCTestCase {
             case .success(_):
                 XCTFail()
             case .error(let error):
-                XCTAssertEqual(ItunesService.Result.ItunesServiceError.network, error)
+                XCTAssertEqual(ItunesService.ItunesServiceError.network, error)
+            }
+            excepting.fulfill()
+        }
+        wait(for: [excepting], timeout: 5)
+    }
+    
+    func testFetchImageShouldRetrieveImage(){
+        let excepting = XCTestExpectation(description: "Should fech image")
+        let bundle = Bundle(for: type(of: self))
+        stub(condition: isHost("is4-ssl.mzstatic.com")) { (request) -> OHHTTPStubsResponse in
+            return OHHTTPStubsResponse(fileURL: bundle.url(forResource: "200x200bb", withExtension: "png")!, statusCode: 200, headers: nil)
+        }
+        ItunesService.fetchImage(url: "https://is4-ssl.mzstatic.com/image/thumb/Music118/v4/2b/0c/15/2b0c15ea-3ac8-71ad-ffda-f8806de09a6c/source/200x200bb.png") { (result) in
+            switch result{
+            case .success(let image):
+                XCTAssertEqual(image.size, CGSize(width: 200, height: 200))
+            case .error(_):
+                XCTFail()
+            }
+            excepting.fulfill()
+        }
+        wait(for: [excepting], timeout: 5)
+    }
+    
+    func testFetchImageShouldErrorOnNoNetwork(){
+        let excepting = XCTestExpectation(description: "Should Error on no Network")
+        stub(condition: isHost("is4-ssl.mzstatic.com")) { (request) -> OHHTTPStubsResponse in
+            let notConnectedError = NSError(domain: NSURLErrorDomain, code: URLError.notConnectedToInternet.rawValue)
+            return OHHTTPStubsResponse(error:notConnectedError)
+        }
+        ItunesService.fetchImage(url: "https://is4-ssl.mzstatic.com/image/thumb/Music118/v4/2b/0c/15/2b0c15ea-3ac8-71ad-ffda-f8806de09a6c/source/200x200bb.png") { (result) in
+            switch result{
+            case .success(_):
+                XCTFail()
+            case .error(let error):
+                XCTAssertEqual(ItunesService.ItunesServiceError.network, error)
             }
             excepting.fulfill()
         }
         wait(for: [excepting], timeout: 5)
     }
 }
+
+
+
+
+
+

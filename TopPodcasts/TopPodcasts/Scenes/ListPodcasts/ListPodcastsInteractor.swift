@@ -14,6 +14,7 @@ import UIKit
 
 protocol ListPodcastsBusinessLogic{
     func listPodcasts(request: ListPodcasts.ListPodcasts.Request)
+    func fetchPodcastImage(request: ListPodcasts.FetchImage.Request)
 }
 
 protocol ListPodcastsDataStore{
@@ -27,10 +28,26 @@ class ListPodcastsInteractor: ListPodcastsBusinessLogic, ListPodcastsDataStore{
     
     func listPodcasts(request: ListPodcasts.ListPodcasts.Request){
         worker = ListPodcastsWorker()
-        worker?.listPodcasts(completion: { [weak self] (succes, podcasts, errorMessage) in
-            self?.podcasts = podcasts
-            let response = ListPodcasts.ListPodcasts.Response(podcasts: podcasts, success: succes, errorMessage: errorMessage)
+        worker?.listPodcasts(completion: { [weak self] (success, podcasts, errorMessage) in
+            if success{
+                self?.podcasts = podcasts
+            }
+            let response = ListPodcasts.ListPodcasts.Response(podcasts: podcasts, success: success, errorMessage: errorMessage)
             self?.presenter?.presentListPodcasts(response: response)
+            
         })
-  }
+        
+    }
+    
+    func fetchPodcastImage(request: ListPodcasts.FetchImage.Request) {
+        worker = ListPodcastsWorker()
+        let podcast = podcasts[request.row]
+        worker?.fetchImageArtwork(url: podcast.artworkUrl100, completion: { [weak self] (success, image, errorMessage) in
+            if success{
+                self?.podcasts[request.row].artwork100Image = image
+            }
+            let response = ListPodcasts.FetchImage.Response(podcast: podcast, row: request.row, success: success, errorMessage: errorMessage)
+            self?.presenter?.presentPodcast(response: response)
+        })
+    }
 }

@@ -38,9 +38,14 @@ class ListPodcastsInteractorTests: XCTestCase{
     // MARK: Test doubles
     class ListPodcastsPresentationLogicSpy: ListPodcastsPresentationLogic{
         var presentListPodcastsCalled = false
+        var presentPodcastCalled = false
     
         func presentListPodcasts(response: ListPodcasts.ListPodcasts.Response){
             presentListPodcastsCalled = true
+        }
+        
+        func presentPodcast(response: ListPodcasts.FetchImage.Response) {
+            presentPodcastCalled = true
         }
     }
   
@@ -69,5 +74,31 @@ class ListPodcastsInteractorTests: XCTestCase{
             excepting.fulfill()
         }
         wait(for: [excepting], timeout: 5)
-  }
+        
+    }
+    
+    func testFetchImage(){
+       
+        let bundle = Bundle(for: type(of: self))
+        stub(condition: isHost("is4-ssl.mzstatic.com")) { (request) -> OHHTTPStubsResponse in
+            return OHHTTPStubsResponse(fileURL: bundle.url(forResource: "200x200bb", withExtension: "png")!, statusCode: 200, headers: nil)
+        }
+        
+        //Given
+        let spy = ListPodcastsPresentationLogicSpy()
+        sut.presenter = spy
+        sut.podcasts = [Podcast()]
+        let request = ListPodcasts.FetchImage.Request(row: 0)
+        
+        //When
+        sut.fetchPodcastImage(request: request)
+        
+        let excepting = XCTestExpectation(description: "Should fech image")
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            // Then
+            XCTAssertTrue(spy.presentPodcastCalled, "doSomething(request:) should ask the presenter to format the result")
+            excepting.fulfill()
+        }
+        wait(for: [excepting], timeout: 5)
+    }
 }

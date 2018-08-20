@@ -10,6 +10,7 @@ import UIKit
 
 protocol ListPodcastsCollectionViewDatasourceDelegate: class{
     func listPodcastsDelegateDidSelectIndexPath(indexPath: IndexPath)
+    func listPodcastsDelegateFetchImage(indexPath: IndexPath)
 }
 
 class ListPodcastsCollectionViewDatasource: NSObject{
@@ -39,9 +40,14 @@ class ListPodcastsCollectionViewDatasource: NSObject{
 
 //MARK: - Methods
 extension ListPodcastsCollectionViewDatasource{
-    func updateWithViewModel(viewModel: ListPodcasts.ListPodcasts.ViewModel){
+    func updateViewModels(viewModel: ListPodcasts.ListPodcasts.ViewModel){
         cellDisplayModels = viewModel.displayModels
         collectionView?.reloadData()
+    }
+    
+    func updateViewModel(viewModel: ListPodcasts.FetchImage.ViewModel){
+        cellDisplayModels[viewModel.response.row] = viewModel.displayModel
+        collectionView?.reloadItems(at: [IndexPath(row: viewModel.response.row, section: 0)])
     }
 }
 
@@ -61,6 +67,11 @@ extension ListPodcastsCollectionViewDatasource: UICollectionViewDataSource{
             emptyCell.label.text = "No Podcasts listed"
         }else if let podcastCell = cell as? ListPodcastsCollectionViewCell{
             podcastCell.label.text = cellDisplayModels[indexPath.row].name
+            if let image = cellDisplayModels[indexPath.row].image{
+                podcastCell.imageView.image = image
+            }else{
+                delegate?.listPodcastsDelegateFetchImage(indexPath: indexPath)
+            }
         }
         return cell
     }

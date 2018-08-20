@@ -51,15 +51,15 @@ extension ShowPodcastTableViewDatasource{
 
 extension ShowPodcastTableViewDatasource: UITableViewDataSource{
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return section == 0 ? 1 : labels.count
+        return labels.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let identifier = indexPath.section == 0 ? "ShowPodcastImageCell" : "ShowPodcastLabelCell"
+        let identifier = "ShowPodcastLabelCell"
         let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
         if let showPodcastLabelCell = cell as? ShowPodcastLabelTableViewCell{
             let value: String
@@ -84,10 +84,22 @@ extension ShowPodcastTableViewDatasource: UITableViewDataSource{
 
 extension ShowPodcastTableViewDatasource: UITableViewDelegate{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return indexPath.section == 0 ? tableView.frame.width : UITableViewAutomaticDimension
+        return UITableViewAutomaticDimension
     }
     
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return 44
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 200
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ShowPodcastImageCell")
+        if let imageCell = cell as? ShowPodcastImageTableViewCell{
+            imageCell.imageView?.image = viewModel.image
+        }
+        return cell
     }
 }

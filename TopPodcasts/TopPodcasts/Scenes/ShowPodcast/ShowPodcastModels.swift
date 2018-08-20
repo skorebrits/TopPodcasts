@@ -28,9 +28,10 @@ enum ShowPodcast{
         var name: String
         var releaseDate: String
         var genres: String
+        var image: UIImage?
         
         static func emptyViewModel() -> ViewModel{
-            return ViewModel(artistName: "-", copyright: "-", name: "-", releaseDate: "-", genres: "-")
+            return ViewModel(artistName: "-", copyright: "-", name: "-", releaseDate: "-", genres: "-", image: nil)
         }
     }
   }

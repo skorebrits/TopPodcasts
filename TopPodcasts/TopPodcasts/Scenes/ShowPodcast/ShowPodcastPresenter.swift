@@ -20,16 +20,13 @@ class ShowPodcastPresenter: ShowPodcastPresentationLogic{
     weak var viewController: ShowPodcastDisplayLogic?
   
     func presentGetPodcast(response: ShowPodcast.GetPodcast.Response){
-        let artistName = response.podcast.artistName
-        let copyright = response.podcast.copyright
-        let name = response.podcast.name
-        let releaseDate = response.podcast.releaseDate
         let genres = (response.podcast.genres.map({ $0.name })).joined(separator: " ")
-        let viewModel = ShowPodcast.GetPodcast.ViewModel(artistName: artistName,
-                                                         copyright: copyright,
-                                                         name: name,
-                                                         releaseDate: releaseDate,
-                                                         genres: genres)
+        let viewModel = ShowPodcast.GetPodcast.ViewModel(artistName: response.podcast.artistName,
+                                                         copyright: response.podcast.copyright,
+                                                         name: response.podcast.name,
+                                                         releaseDate: response.podcast.releaseDate,
+                                                         genres: genres,
+                                                         image: response.podcast.artwork100Image)
         
         viewController?.displayGetPodcast(viewModel: viewModel)
     }

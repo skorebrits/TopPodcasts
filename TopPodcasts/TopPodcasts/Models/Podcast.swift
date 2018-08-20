@@ -6,7 +6,7 @@
 //  Copyright © 2018 designlapp. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 /*
  feed =     {
@@ -81,6 +81,22 @@ struct Podcast: Codable{
     let releaseDate: String
     let url: String
     let genres: [Genre]
+    var artwork100ImageData: Data?
+    var artwork100Image: UIImage?{
+        get{
+        guard let data = artwork100ImageData else{
+            return nil
+        }
+        return UIImage(data: data)
+        }
+        set(image){
+            guard let unwrappedImage = image else{
+                self.artwork100ImageData = nil
+                return
+            }
+            self.artwork100ImageData = UIImageJPEGRepresentation(unwrappedImage, 1.0)
+        }
+    }
     
     enum JSONKeys: String, CodingKey{
         case artistName = "artistName"
@@ -136,6 +152,7 @@ struct Podcast: Codable{
         releaseDate = try container.decodeIfPresent(String.self, forKey: .releaseDate) ?? ""
         url = try container.decodeIfPresent(String.self, forKey: .url) ?? ""
         genres = try container.decodeIfPresent([Genre].self, forKey: .genres) ?? []
+        artwork100ImageData = nil
     }
     
     init(){
@@ -147,6 +164,7 @@ struct Podcast: Codable{
         releaseDate = ""
         url = ""
         genres = []
+        artwork100ImageData = nil
     }
 }
 

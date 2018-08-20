@@ -14,6 +14,7 @@ import UIKit
 
 protocol ListPodcastsPresentationLogic{
     func presentListPodcasts(response: ListPodcasts.ListPodcasts.Response)
+    func presentPodcast(response: ListPodcasts.FetchImage.Response)
 }
 
 class ListPodcastsPresenter: ListPodcastsPresentationLogic{
@@ -29,5 +30,11 @@ class ListPodcastsPresenter: ListPodcastsPresentationLogic{
         
         let viewModel = ListPodcasts.ListPodcasts.ViewModel(response: response, displayModels: displayModels)
         viewController?.displayListPodcasts(viewModel: viewModel)
+    }
+    
+    func presentPodcast(response: ListPodcasts.FetchImage.Response) {
+        let displayedModel = ListPodcasts.ListPodcasts.ViewModel.CellDisplayModel(name: response.podcast.name, image: response.podcast.artwork100Image)
+        let viewModel = ListPodcasts.FetchImage.ViewModel(response: response, displayModel: displayedModel)
+        viewController?.displayPodcast(viewModel: viewModel)
     }
 }

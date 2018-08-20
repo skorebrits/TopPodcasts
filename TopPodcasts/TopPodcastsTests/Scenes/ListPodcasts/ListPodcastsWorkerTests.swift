@@ -49,8 +49,8 @@ class ListPodcastsWorkerTests: XCTestCase{
         }
         
         let excepting = XCTestExpectation(description: "Should Return Podcasts")
-        sut.listPodcasts { (succes, podcasts, errorMessage) in
-            XCTAssertEqual(succes, true)
+        sut.listPodcasts { (success, podcasts, errorMessage) in
+            XCTAssertEqual(success, true)
             XCTAssertNil(errorMessage, "error message should be nil")
             XCTAssertEqual(podcasts.count, 25)
             excepting.fulfill()
@@ -64,9 +64,39 @@ class ListPodcastsWorkerTests: XCTestCase{
             let notConnectedError = NSError(domain: NSURLErrorDomain, code: URLError.notConnectedToInternet.rawValue)
             return OHHTTPStubsResponse(error:notConnectedError)
         }
-        sut.listPodcasts { (succes, podcasts, errorMessage) in
-            XCTAssertEqual(succes, false)
+        sut.listPodcasts { (success, podcasts, errorMessage) in
+            XCTAssertEqual(success, false)
             XCTAssertEqual(podcasts.count, 0)
+            XCTAssertNotNil(errorMessage)
+            excepting.fulfill()
+        }
+        wait(for: [excepting], timeout: 5)
+    }
+    
+    func testFetchShouldReturnImage(){
+        let excepting = XCTestExpectation(description: "Should fech image")
+        let bundle = Bundle(for: type(of: self))
+        stub(condition: isHost("is4-ssl.mzstatic.com")) { (request) -> OHHTTPStubsResponse in
+            return OHHTTPStubsResponse(fileURL: bundle.url(forResource: "200x200bb", withExtension: "png")!, statusCode: 200, headers: nil)
+        }
+        sut.fetchImageArtwork(url: "https://is4-ssl.mzstatic.com/image/thumb/Music118/v4/2b/0c/15/2b0c15ea-3ac8-71ad-ffda-f8806de09a6c/source/200x200bb.png") { (success, image, errorMessage) in
+            XCTAssertEqual(success, true)
+            XCTAssertNil(errorMessage, "error message should be nil")
+            XCTAssertEqual(image!.size, CGSize(width: 200, height: 200))
+            excepting.fulfill()
+        }
+        wait(for: [excepting], timeout: 5)
+    }
+    
+    func testFetchShouldError(){
+        let excepting = XCTestExpectation(description: "Should Error on no Network")
+        stub(condition: isHost("is4-ssl.mzstatic.com")) { (request) -> OHHTTPStubsResponse in
+            let notConnectedError = NSError(domain: NSURLErrorDomain, code: URLError.notConnectedToInternet.rawValue)
+            return OHHTTPStubsResponse(error:notConnectedError)
+        }
+        sut.fetchImageArtwork(url: "https://is4-ssl.mzstatic.com/image/thumb/Music118/v4/2b/0c/15/2b0c15ea-3ac8-71ad-ffda-f8806de09a6c/source/200x200bb.png") { (success, image, errorMessage) in
+            XCTAssertEqual(success, false)
+            XCTAssertNil(image)
             XCTAssertNotNil(errorMessage)
             excepting.fulfill()
         }

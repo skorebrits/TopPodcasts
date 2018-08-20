@@ -14,6 +14,7 @@ import UIKit
 
 protocol ListPodcastsDisplayLogic: class{
     func displayListPodcasts(viewModel: ListPodcasts.ListPodcasts.ViewModel)
+    func displayPodcast(viewModel: ListPodcasts.FetchImage.ViewModel)
 }
 
 class ListPodcastsViewController: UIViewController{
@@ -88,7 +89,7 @@ class ListPodcastsViewController: UIViewController{
 extension ListPodcastsViewController: ListPodcastsDisplayLogic{
     func displayListPodcasts(viewModel: ListPodcasts.ListPodcasts.ViewModel) {
         if viewModel.response.success{
-            collectionViewDatasource.updateWithViewModel(viewModel: viewModel)
+            collectionViewDatasource.updateViewModels(viewModel: viewModel)
             if refreshControl.isRefreshing{
                 refreshControl.endRefreshing()
             }
@@ -96,11 +97,22 @@ extension ListPodcastsViewController: ListPodcastsDisplayLogic{
             displayErrorMessage(errorMessage: viewModel.response.errorMessage)
         }
     }
+    
+    func displayPodcast(viewModel: ListPodcasts.FetchImage.ViewModel) {
+        if viewModel.response.success{
+            collectionViewDatasource.updateViewModel(viewModel: viewModel)
+        }
+        // MARK: Error
+    }
 }
 
 extension ListPodcastsViewController: ListPodcastsCollectionViewDatasourceDelegate{
     func listPodcastsDelegateDidSelectIndexPath(indexPath: IndexPath) {
         performSegue(withIdentifier: "ShowPodcast", sender: nil)
+    }
+    
+    func listPodcastsDelegateFetchImage(indexPath: IndexPath) {
+        interactor?.fetchPodcastImage(request: ListPodcasts.FetchImage.Request(row: indexPath.row))
     }
 }
 
