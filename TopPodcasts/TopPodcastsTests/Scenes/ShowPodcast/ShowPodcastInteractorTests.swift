@@ -47,7 +47,7 @@ class ShowPodcastInteractorTests: XCTestCase{
         // Given
         let spy = ShowPodcastPresentationLogicSpy()
         sut.presenter = spy
-        sut.podcast = Podcast.emptyPodcast()
+        sut.podcast = Podcast()
         let request = ShowPodcast.GetPodcast.Request()
     
         // When

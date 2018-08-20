@@ -52,7 +52,6 @@ import Foundation
          url = "https://itunes.apple.com/nl/podcast/vpro-zomergasten/id1412808006?mt=2";
          },
  */
-
 struct Feed: Codable{
     let title: String?
     let author: Author?
@@ -74,23 +73,80 @@ struct Feed: Codable{
 }
 
 struct Podcast: Codable{
-    let artistName: String?
-    let artworkUrl100: String?
-    let copyright: String?
-    let id: String?
-    let name: String?
-    let releaseDate: String?
-    let url: String?
+    let artistName: String
+    let artworkUrl100: String
+    let copyright: String
+    let id: String
+    let name: String
+    let releaseDate: String
+    let url: String
     let genres: [Genre]
     
-    struct Genre: Codable{
-        let genreId: String?
-        let name: String?
-        let url: String?
+    enum JSONKeys: String, CodingKey{
+        case artistName = "artistName"
+        case artworkUrl100 = "artworkUrl100"
+        case copyright = "copyright"
+        case id = "id"
+        case name = "name"
+        case releaseDate = "releaseDate"
+        case url = "url"
+        case genres = "genres"
     }
     
-    static func emptyPodcast() -> Podcast{
-        return Podcast(artistName: nil, artworkUrl100: nil, copyright: nil, id: nil, name: nil, releaseDate: nil, url: nil, genres: [])
+    struct Genre: Codable, Equatable{
+        let genreId: String
+        let name: String
+        let url: String
+        
+        enum JSONKeys: String, CodingKey{
+            case genreId = "genreId"
+            case name = "name"
+            case url = "url"
+        }
+        
+        init(from decoder: Decoder) throws{
+            let container = try decoder.container(keyedBy: Podcast.Genre.JSONKeys.self)
+            
+            genreId = try container.decodeIfPresent(String.self, forKey: .genreId) ?? ""
+            name = try container.decodeIfPresent(String.self, forKey: .name) ?? ""
+            url = try container.decodeIfPresent(String.self, forKey: .url) ?? ""
+        }
+        
+        init(genreId: String, name: String, url: String){
+            self.genreId = genreId
+            self.name = name
+            self.url = url
+        }
+        
+        static func == (lhs: Genre, rhs: Genre) -> Bool {
+            return lhs.name == rhs.name &&
+                lhs.genreId == rhs.genreId &&
+                lhs.url == rhs.url
+        }
+    }
+    
+    init(from decoder: Decoder) throws{
+        let container = try decoder.container(keyedBy: Podcast.JSONKeys.self)
+        
+        artistName = try container.decodeIfPresent(String.self, forKey: .artistName) ?? ""
+        artworkUrl100 = try container.decodeIfPresent(String.self, forKey: .artworkUrl100) ?? ""
+        copyright = try container.decodeIfPresent(String.self, forKey: .copyright) ?? ""
+        id = try container.decodeIfPresent(String.self, forKey: .id) ?? ""
+        name = try container.decodeIfPresent(String.self, forKey: .name) ?? ""
+        releaseDate = try container.decodeIfPresent(String.self, forKey: .releaseDate) ?? ""
+        url = try container.decodeIfPresent(String.self, forKey: .url) ?? ""
+        genres = try container.decodeIfPresent([Genre].self, forKey: .genres) ?? []
+    }
+    
+    init(){
+        artistName = ""
+        artworkUrl100 = ""
+        copyright = ""
+        id = ""
+        name = ""
+        releaseDate = ""
+        url = ""
+        genres = []
     }
 }
 

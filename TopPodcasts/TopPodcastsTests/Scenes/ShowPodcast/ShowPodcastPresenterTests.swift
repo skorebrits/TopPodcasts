@@ -48,7 +48,7 @@ class ShowPodcastPresenterTests: XCTestCase{
         // Given
         let spy = ShowPodcastDisplayLogicSpy()
         sut.viewController = spy
-        let response = ShowPodcast.GetPodcast.Response(podcast: Podcast.emptyPodcast())
+        let response = ShowPodcast.GetPodcast.Response(podcast: Podcast())
 
         // When
         sut.presentGetPodcast(response: response)

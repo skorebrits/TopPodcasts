@@ -15,6 +15,7 @@
 		F44EC9262125C99300DEB010 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F44EC9252125C99300DEB010 /* Alamofire.framework */; };
 		F44EC9272125C99300DEB010 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F44EC9252125C99300DEB010 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F44EC92A2125C9F700DEB010 /* OHHTTPStubs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F44EC9292125C9F700DEB010 /* OHHTTPStubs.framework */; };
+		F468F1D8212AB58300949093 /* Podcast.swift in Sources */ = {isa = PBXBuildFile; fileRef = F468F1D7212AB58300949093 /* Podcast.swift */; };
 		F494FE392126C546006F6FDC /* ListPodcastsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F494FE382126C546006F6FDC /* ListPodcastsViewController.swift */; };
 		F494FE3B2126C557006F6FDC /* ListPodcastsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F494FE3A2126C557006F6FDC /* ListPodcastsInteractor.swift */; };
 		F494FE3D2126C567006F6FDC /* ListPodcastsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F494FE3C2126C567006F6FDC /* ListPodcastsPresenter.swift */; };
@@ -100,6 +101,7 @@
 		F44EC9222125C8B800DEB010 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = "<group>"; };
 		F44EC9252125C99300DEB010 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		F44EC9292125C9F700DEB010 /* OHHTTPStubs.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OHHTTPStubs.framework; path = Carthage/Build/iOS/OHHTTPStubs.framework; sourceTree = "<group>"; };
+		F468F1D7212AB58300949093 /* Podcast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Podcast.swift; sourceTree = "<group>"; };
 		F494FE382126C546006F6FDC /* ListPodcastsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPodcastsViewController.swift; sourceTree = "<group>"; };
 		F494FE3A2126C557006F6FDC /* ListPodcastsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPodcastsInteractor.swift; sourceTree = "<group>"; };
 		F494FE3C2126C567006F6FDC /* ListPodcastsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPodcastsPresenter.swift; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 		F44EC9002125C6BA00DEB010 /* TopPodcastsTests */ = {
 			isa = PBXGroup;
 			children = (
+				F468F1D6212AB55D00949093 /* Models */,
 				F494FE6821270260006F6FDC /* OHTTPStubsResponses */,
 				F494FE612126F2F2006F6FDC /* Services */,
 				F494FE8521272304006F6FDC /* Scenes */,
@@ -248,6 +251,14 @@
 				F44EC9222125C8B800DEB010 /* Alamofire.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F468F1D6212AB55D00949093 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F468F1D7212AB58300949093 /* Podcast.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		F494FE4B2126D279006F6FDC /* Services */ = {
@@ -545,6 +556,7 @@
 				F494FE962127236D006F6FDC /* ShowPodcastPresenterTests.swift in Sources */,
 				F494FE592126EB2D006F6FDC /* ListPodcastsPresenterTests.swift in Sources */,
 				F494FE562126EB2D006F6FDC /* ListPodcastsViewControllerTests.swift in Sources */,
+				F468F1D8212AB58300949093 /* Podcast.swift in Sources */,
 				F494FE582126EB2D006F6FDC /* ListPodcastsWorkerTests.swift in Sources */,
 				F494FE952127236D006F6FDC /* ShowPodcastWorkerTests.swift in Sources */,
 				F494FE572126EB2D006F6FDC /* ListPodcastsInteractorTests.swift in Sources */,

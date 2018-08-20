@@ -23,10 +23,8 @@ class ListPodcastsPresenter: ListPodcastsPresentationLogic{
     func presentListPodcasts(response: ListPodcasts.ListPodcasts.Response){
         var displayModels: [ListPodcasts.ListPodcasts.ViewModel.CellDisplayModel] = []
         for podcast in response.podcasts where response.success{
-            if let name = podcast.name{
-                let displayModel = ListPodcasts.ListPodcasts.ViewModel.CellDisplayModel(name: name, image: nil)
-                displayModels.append(displayModel)
-            }
+            let displayModel = ListPodcasts.ListPodcasts.ViewModel.CellDisplayModel(name: podcast.name, image: nil)
+            displayModels.append(displayModel)
         }
         
         let viewModel = ListPodcasts.ListPodcasts.ViewModel(response: response, displayModels: displayModels)
