@@ -34,7 +34,9 @@ class ShowPodcastTableViewDatasource: NSObject{
         super.init()
         self.tableView?.dataSource = self
         self.tableView?.delegate = self
-        let nibAndIdentifier = ["ShowPodcastImageTableViewCell" : "ShowPodcastImageCell", "ShowPodcastLabelTableViewCell" : "ShowPodcastLabelCell"]
+        let nibAndIdentifier = [
+            String(describing: ShowPodcastImageTableViewCell.self) : "ShowPodcastImageCell",
+            String(describing: ShowPodcastLabelTableViewCell.self) : "ShowPodcastLabelCell"]
         for (nib, identifier) in nibAndIdentifier{
             self.tableView?.register(UINib(nibName: nib, bundle: Bundle.main), forCellReuseIdentifier: identifier)
         }

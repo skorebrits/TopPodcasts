@@ -31,7 +31,9 @@ class ListPodcastsCollectionViewDatasource: NSObject{
         self.collectionView?.dataSource = self
         self.collectionView?.delegate = self
         self.collectionView?.collectionViewLayout = layout
-        let nibAndIdentifiers = ["ListPodcastsCollectionViewCell" : "ListPodcastCell", "ListPodcastsEmptyCollectionViewCell" : "ListPodcastEmptyCell"]
+        let nibAndIdentifiers = [
+            String(describing: ListPodcastsCollectionViewCell.self) : "ListPodcastCell",
+            String(describing: ListPodcastsEmptyCollectionViewCell.self) : "ListPodcastEmptyCell"]
         for (nibName, reuseIdentifier) in nibAndIdentifiers{
             self.collectionView?.register(UINib(nibName: nibName, bundle: Bundle.main), forCellWithReuseIdentifier: reuseIdentifier)
         }
@@ -70,6 +72,7 @@ extension ListPodcastsCollectionViewDatasource: UICollectionViewDataSource{
             if let image = cellDisplayModels[indexPath.row].image{
                 podcastCell.imageView.image = image
             }else{
+                podcastCell.imageView.image = nil
                 delegate?.listPodcastsDelegateFetchImage(indexPath: indexPath)
             }
         }
