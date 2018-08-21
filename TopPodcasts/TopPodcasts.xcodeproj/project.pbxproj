@@ -172,17 +172,13 @@
 		F42796302126C00C0018F627 /* ListPodcasts */ = {
 			isa = PBXGroup;
 			children = (
+				F4EB700B212C641D0016D80C /* CollectionView */,
 				F494FE382126C546006F6FDC /* ListPodcastsViewController.swift */,
-				F494FE442126C86C006F6FDC /* ListPodcastsCollectionViewDatasource.swift */,
 				F494FE3E2126C578006F6FDC /* ListPodcastsModels.swift */,
 				F494FE3A2126C557006F6FDC /* ListPodcastsInteractor.swift */,
 				F494FE3C2126C567006F6FDC /* ListPodcastsPresenter.swift */,
 				F494FE402126C58A006F6FDC /* ListPodcastsWorker.swift */,
 				F494FE422126C5AE006F6FDC /* ListPodcastsRouter.swift */,
-				F494FE462126C98F006F6FDC /* ListPodcastsEmptyCollectionViewCell.swift */,
-				F494FE472126C98F006F6FDC /* ListPodcastsEmptyCollectionViewCell.xib */,
-				F494FE6921270F4C006F6FDC /* ListPodcastsCollectionViewCell.swift */,
-				F494FE6A21270F4C006F6FDC /* ListPodcastsCollectionViewCell.xib */,
 			);
 			path = ListPodcasts;
 			sourceTree = "<group>";
@@ -321,17 +317,13 @@
 		F494FE6E212718D3006F6FDC /* ShowPodcast */ = {
 			isa = PBXGroup;
 			children = (
+				F4EB700C212C643B0016D80C /* TableView */,
 				F494FE6F21271905006F6FDC /* ShowPodcastViewController.swift */,
-				F494FE7B21271DA1006F6FDC /* ShowPodcastTableViewDatasource.swift */,
 				F494FE712127191A006F6FDC /* ShowPodcastInteractor.swift */,
 				F494FE732127193D006F6FDC /* ShowPodcastPresenter.swift */,
 				F494FE7521271954006F6FDC /* ShowPodcastModels.swift */,
 				F494FE772127198C006F6FDC /* ShowPodcastRouter.swift */,
 				F494FE79212719B0006F6FDC /* ShowPodcastWorker.swift */,
-				F494FE7D21272001006F6FDC /* ShowPodcastLabelTableViewCell.swift */,
-				F494FE7E21272001006F6FDC /* ShowPodcastLabelTableViewCell.xib */,
-				F494FE8121272114006F6FDC /* ShowPodcastImageTableViewCell.swift */,
-				F494FE8221272114006F6FDC /* ShowPodcastImageTableViewCell.xib */,
 			);
 			path = ShowPodcast;
 			sourceTree = "<group>";
@@ -354,6 +346,30 @@
 				F494FE922127236D006F6FDC /* ShowPodcastPresenterTests.swift */,
 			);
 			path = ShowPodcast;
+			sourceTree = "<group>";
+		};
+		F4EB700B212C641D0016D80C /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				F494FE442126C86C006F6FDC /* ListPodcastsCollectionViewDatasource.swift */,
+				F494FE462126C98F006F6FDC /* ListPodcastsEmptyCollectionViewCell.swift */,
+				F494FE472126C98F006F6FDC /* ListPodcastsEmptyCollectionViewCell.xib */,
+				F494FE6921270F4C006F6FDC /* ListPodcastsCollectionViewCell.swift */,
+				F494FE6A21270F4C006F6FDC /* ListPodcastsCollectionViewCell.xib */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		F4EB700C212C643B0016D80C /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				F494FE7B21271DA1006F6FDC /* ShowPodcastTableViewDatasource.swift */,
+				F494FE7D21272001006F6FDC /* ShowPodcastLabelTableViewCell.swift */,
+				F494FE7E21272001006F6FDC /* ShowPodcastLabelTableViewCell.xib */,
+				F494FE8121272114006F6FDC /* ShowPodcastImageTableViewCell.swift */,
+				F494FE8221272114006F6FDC /* ShowPodcastImageTableViewCell.xib */,
+			);
+			path = TableView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
