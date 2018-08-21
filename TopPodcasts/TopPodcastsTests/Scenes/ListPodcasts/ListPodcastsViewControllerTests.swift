@@ -72,8 +72,7 @@ class ListPodcastsViewControllerTests: XCTestCase{
 
     func testDisplayListPodcasts(){
         // Given
-        let response = ListPodcasts.ListPodcasts.Response(podcasts: [], success: true, errorMessage: nil)
-        let viewModel = ListPodcasts.ListPodcasts.ViewModel(response: response, displayModels: [])
+        let viewModel = ListPodcasts.ListPodcasts.ViewModel(displayModels: [], errorDisplayModel: nil)
 
         // When
         loadView()

@@ -13,29 +13,24 @@
 import UIKit
 
 class ListPodcastsWorker{
-    func listPodcasts(completion: @escaping (_ succes: Bool, _ podcasts: [Podcast], _ errorMessage: String?) -> Void){
+    func listPodcasts(completion: @escaping (_ succes: Bool, _ podcasts: [Podcast], _ error: ItunesService.ItunesServiceError?) -> Void){
         ItunesService.fetchTopPodcasts { (result) in
             switch result{
             case .success(let feed):
                 completion(true, feed.results, nil)
             case .error(let error):
-                switch error{
-                case .malformdJSON:
-                    completion(false, [], ErrorMessage.ItunesService.malformedJSON.str)
-                case .network:
-                    completion(false, [], ErrorMessage.ItunesService.networkError.str)
-                }
+                completion(false, [], error)
             }
         }
     }
     
-    func fetchImageArtwork(url: String, completion: @escaping (_ succes: Bool, _ artworkImage: UIImage?, _ errorMessage: String?) -> Void){
+    func fetchImageArtwork(url: String, completion: @escaping (_ succes: Bool, _ artworkImage: UIImage?, _ error: ItunesService.ItunesServiceError?) -> Void){
         ItunesService.fetchImage(url: url) { (result) in
             switch result{
             case .success(let image):
                 completion(true, image, nil)
-            case .error(_):
-                completion(false, nil, ErrorMessage.ItunesService.networkError.str)
+            case .error(let error):
+                completion(false, nil, error)
             }
         }
     }

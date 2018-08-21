@@ -24,7 +24,7 @@ enum ListPodcasts{
         struct Response{
             var podcasts: [Podcast]
             var success: Bool
-            var errorMessage: String?
+            var error: ItunesService.ItunesServiceError?
         }
 
         struct ViewModel{
@@ -32,8 +32,11 @@ enum ListPodcasts{
                 var name: String
                 var image: UIImage?
             }
-            var response: Response
+            struct ErrorDisplayModel{
+                var message: String
+            }
             var displayModels: [CellDisplayModel]
+            var errorDisplayModel: ErrorDisplayModel?
         }
     }
     
@@ -46,7 +49,7 @@ enum ListPodcasts{
             var podcast: Podcast
             var row: Int
             var success: Bool
-            var errorMessage: String?
+            var error: ItunesService.ItunesServiceError?
         }
         
         struct ViewModel{

@@ -22,14 +22,21 @@ class ListPodcastsPresenter: ListPodcastsPresentationLogic{
   
     // MARK: Do something
     func presentListPodcasts(response: ListPodcasts.ListPodcasts.Response){
-        var displayModels: [ListPodcasts.ListPodcasts.ViewModel.CellDisplayModel] = []
-        for podcast in response.podcasts where response.success{
-            let displayModel = ListPodcasts.ListPodcasts.ViewModel.CellDisplayModel(name: podcast.name, image: nil)
-            displayModels.append(displayModel)
+        if response.success{
+            var displayModels: [ListPodcasts.ListPodcasts.ViewModel.CellDisplayModel] = []
+            for podcast in response.podcasts where response.success{
+                let displayModel = ListPodcasts.ListPodcasts.ViewModel.CellDisplayModel(name: podcast.name, image: nil)
+                displayModels.append(displayModel)
+            }
+            
+            let viewModel = ListPodcasts.ListPodcasts.ViewModel(displayModels: displayModels, errorDisplayModel: nil)
+            viewController?.displayListPodcasts(viewModel: viewModel)
+        }else if let error = response.error{
+            let errorDisplayModel = ListPodcasts.ListPodcasts.ViewModel.ErrorDisplayModel(message: ErrorMessage.ItunesServiceError.errorMessage(error: error))
+            let viewModel = ListPodcasts.ListPodcasts.ViewModel(displayModels: [], errorDisplayModel: errorDisplayModel)
+            viewController?.displayError(viewModel: viewModel)
         }
         
-        let viewModel = ListPodcasts.ListPodcasts.ViewModel(response: response, displayModels: displayModels)
-        viewController?.displayListPodcasts(viewModel: viewModel)
     }
     
     func presentPodcast(response: ListPodcasts.FetchImage.Response) {

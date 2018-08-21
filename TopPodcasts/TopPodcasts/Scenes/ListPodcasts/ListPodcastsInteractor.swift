@@ -28,11 +28,11 @@ class ListPodcastsInteractor: ListPodcastsBusinessLogic, ListPodcastsDataStore{
     
     func listPodcasts(request: ListPodcasts.ListPodcasts.Request){
         worker = ListPodcastsWorker()
-        worker?.listPodcasts(completion: { [weak self] (success, podcasts, errorMessage) in
+        worker?.listPodcasts(completion: { [weak self] (success, podcasts, error) in
             if success{
                 self?.podcasts = podcasts
             }
-            let response = ListPodcasts.ListPodcasts.Response(podcasts: podcasts, success: success, errorMessage: errorMessage)
+            let response = ListPodcasts.ListPodcasts.Response(podcasts: podcasts, success: success, error: error)
             self?.presenter?.presentListPodcasts(response: response)
             
         })
@@ -42,11 +42,11 @@ class ListPodcastsInteractor: ListPodcastsBusinessLogic, ListPodcastsDataStore{
     func fetchPodcastImage(request: ListPodcasts.FetchImage.Request) {
         worker = ListPodcastsWorker()
         let podcast = podcasts[request.row]
-        worker?.fetchImageArtwork(url: podcast.artworkUrl100, completion: { [weak self] (success, image, errorMessage) in
+        worker?.fetchImageArtwork(url: podcast.artworkUrl100, completion: { [weak self] (success, image, error) in
             if success{
                 self?.podcasts[request.row].artwork100Image = image
             }
-            let response = ListPodcasts.FetchImage.Response(podcast: podcast, row: request.row, success: success, errorMessage: errorMessage)
+            let response = ListPodcasts.FetchImage.Response(podcast: podcast, row: request.row, success: success, error: error)
             self?.presenter?.presentPodcast(response: response)
         })
     }
